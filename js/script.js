@@ -2,16 +2,9 @@ function buscarNoticias() {
     const apiKey = '46eeb39276e247b4a52a2e6408dfbef4'; 
     const searchTerm = document.getElementById('searchInput').value;
     const fonte = 'globo';
-    const url = `https://newsapi.org/v2/everything?apiKey=${apiKey}&q=${searchTerm}&sources=${fonte}&language=pt`;
+    const serverUrl = `http://localhost:3000/noticias?searchTerm=${searchTerm}`; // Altere para o URL do seu servidor intermediário
 
-    const requestOptions = {
-        method: 'GET',
-        headers: {
-            'Authorization': `Bearer ${apiKey}`
-        }
-    };
-
-    fetch(url, requestOptions)
+    fetch(serverUrl)
         .then(response => response.json())
         .then(data => {
             exibirNoticias(data.articles.slice(0, 10)); 
@@ -19,8 +12,6 @@ function buscarNoticias() {
         .catch(error => {
             console.error('Erro ao buscar notícias:', error);
         });
-}
-
 
 function exibirNoticias(noticias) {
     const noticiasDiv = document.getElementById('noticias');
