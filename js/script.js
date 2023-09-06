@@ -4,7 +4,14 @@ function buscarNoticias() {
     const fonte = 'globo';
     const url = `https://newsapi.org/v2/everything?apiKey=${apiKey}&q=${searchTerm}&sources=${fonte}&language=pt`;
 
-    fetch(url)
+    const requestOptions = {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${apiKey}`
+        }
+    };
+
+    fetch(url, requestOptions)
         .then(response => response.json())
         .then(data => {
             exibirNoticias(data.articles.slice(0, 10)); 
@@ -13,6 +20,7 @@ function buscarNoticias() {
             console.error('Erro ao buscar notícias:', error);
         });
 }
+
 
 function exibirNoticias(noticias) {
     const noticiasDiv = document.getElementById('noticias');
