@@ -1,13 +1,13 @@
 function buscarNoticias() {
-    const apiKey = '46eeb39276e247b4a52a2e6408dfbef4'; // Substitua com sua chave de API do NewsAPI.org
+    const apiKey = '46eeb39276e247b4a52a2e6408dfbef4'; 
     const searchTerm = document.getElementById('searchInput').value;
-    const fonte = 'globo'; // Fonte de notícias em português
+    const fonte = 'globo';
     const url = `https://newsapi.org/v2/everything?apiKey=${apiKey}&q=${searchTerm}&sources=${fonte}&language=pt`;
 
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            exibirNoticias(data.articles.slice(0, 10)); // Limitar a 10 notícias
+            exibirNoticias(data.articles.slice(0, 10)); 
         })
         .catch(error => {
             console.error('Erro ao buscar notícias:', error);
