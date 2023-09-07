@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>G1</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="G1">
+    <meta name="description" content="Site de notícias nacionais">
+    <meta name="keywords" content="Notícias, Brasil, jornalismo, reportagem, governo">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+            <div class="clear"></div>
+        </div>
+        <div id="menu">
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="http://g1.globo.com/principios-editoriais-do-grupo-globo.html">princípios editoriais |</a></li>
+                    <li><a href="https://www.globo.com/privacidade.html">política de privacidade |</a></li>
+                    <li><a href="https://minhaconta.globo.com/">minha conta |</a></li>
+                    <li><a href="http://www.globo.com/Portal/anuncie/glb_anuncie_panfleto">anuncie conosco</a></li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+            <nav class="menu-mobile">
+                <img id="menu-img" src="assets/menu.png" alt=" Três barras horizontais na cor Branca que funcionam como botão de acesso ao menu ">
+                <ul>
+                    <li><a href="http://g1.globo.com/principios-editoriais-do-grupo-globo.html">princípios editoriais</a></li>
+                    <li><a href="https://www.globo.com/privacidade.html">política de privacidade</a></li>
+                    <li><a href="https://minhaconta.globo.com/">minha conta</a></li>
+                    <li><a href="http://www.globo.com/Portal/anuncie/glb_anuncie_panfleto">anuncie conosco</a></li>
+                </ul>
+                <div class="clear"></div>
+            </nav>
+        </div>
+        <div id="buscar">
+            <input type="text" id="searchInput" placeholder="Buscar notícias">
+            <button id="searchButton" onclick="buscarNoticias()"><img src="assets/buscar.png" alt=""></button>
+            <div class="clear"></div>
+        </div>
+    </header>
+
+    <section>
+        <div class="box">
+            <a href="https://noticias.uol.com.br/cotidiano/ultimas-noticias/2023/09/04/mortos-chuvas-rio-grande-do-sul.htm"><h3>Ciclone causa chuva forte e 4 mortes no RS; fenômeno avança ao Sudeste</h3></a>
+            <a href="https://noticias.uol.com.br/cotidiano/ultimas-noticias/2023/09/04/mortos-chuvas-rio-grande-do-sul.htm"><p>Ciclone gera até alerta vermelho: veja quais estados serão os mais afetados</p></a>
+        </div>
+    </section>
+
+     <section>
+        <div class="container2">
+            <div id="noticias"></div>
+            <div class="clear"></div>
+        </div>
+     </section>
+
+     <section id="section-noticias">
+        <div class="container2">
+            <div class="noticias">
+                <div class="noticias-single">
+                    <img src="assets/img1.png" alt="suspeito">
+                    <h2>Mingau segue em estado grave após ser baleado na cabeça e passar por cirurgia</h2>
+                    <a href="noticia.html"><button>Leia mais</button></a>
+                </div>
+                <div class="noticias-single">
+                    <img src="assets/img2.png" alt="suspeito">
+                    <h2>Polícia ouve testemunhas no caso da ex que acusa Antony de agressão</h2>
+                    <a href="noticia.html"><button>Leia mais</button></a>
+                </div>
+                <div class="noticias-single">
+                    <img src="assets/img3.png" alt="suspeito">
+                    <h2>Transferência de Neymar para a Arábia Saudita enfraquece futebol brasileiro</h2>
+                    <a href="noticia.html"><button>Leia mais</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+     <footer>
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo">
+                <div class="clear"></div>
+            </div>
+            <div>
+                <nav id="nav-footer">
+                    <ul>
+                        <li><a href="http://g1.globo.com/principios-editoriais-do-grupo-globo.html">princípios editoriais |</a></li>
+                        <li><a href="https://www.globo.com/privacidade.html">política de privacidade |</a></li>
+                        <li><a href="https://minhaconta.globo.com/">minha conta |</a></li>
+                        <li><a href="http://www.globo.com/Portal/anuncie/glb_anuncie_panfleto">anuncie conosco</a></li>
+                    </ul>
+                </nav>
+            </div>
+     </footer>
+
+     <footer id="footer2">
+        <p>© Copyright 2000-2023 Globo Comunicação e Participações S.A.</p>
+     </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $('.menu-mobile img').click(function(){
+            $('.menu-mobile ul').slideToggle();
+        });
+    </script>
+</body>
+</html>
