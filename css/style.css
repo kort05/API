@@ -288,6 +288,11 @@ footer a:hover{
         order: 2;
     }
 
+    #searchButton h2{
+        font-size: 12px;
+        color: black;
+    }
+
     #menu{
         order: 3;
         margin-right: 0;
